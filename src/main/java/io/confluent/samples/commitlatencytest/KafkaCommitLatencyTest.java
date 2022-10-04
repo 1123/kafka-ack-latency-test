@@ -1,21 +1,12 @@
-package io.confluent.samples.KafkaCommitLatencyTest;
+package io.confluent.samples.commitlatencytest;
 
 import lombok.extern.slf4j.Slf4j;
-import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.RecordMetadata;
-import org.apache.kafka.common.serialization.StringDeserializer;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.kafka.annotation.EnableKafka;
-import org.springframework.scheduling.annotation.EnableScheduling;
 
-import java.io.*;
-import java.time.Duration;
-import java.util.Collections;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
